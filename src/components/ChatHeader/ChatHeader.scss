@@ -1,0 +1,21 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    background-color: #3E3F4E;
+    position: relative;
+
+    .headerText {
+        color: rgb(175, 174, 174);
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .backLink {
+        position: absolute;
+        left: 30px;
+        font-size: 20px;
+        color: rgb(219, 216, 216);
+    }
+}

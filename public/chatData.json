@@ -1,0 +1,158 @@
+{
+    "chats" : {
+        "byIds" : {
+            "1" : {
+                "id" : 1,
+                "memberId" : 2,
+                "lastMessageId" : 2,
+                "lastMessageTime" : "2019-02-05T11:22:00.000Z",
+                "messages" : [1, 2]
+            },
+            "2" : {
+                "id" : 2,
+                "memberId" : 4,
+                "lastMessageId" : 4,
+                "lastMessageTime" : "2019-02-05T11:41:00.000Z",
+                "messages" : [3, 4]
+            },
+            "3" : {
+                "id" : 3,
+                "memberId" : 6,
+                "lastMessageId" : 5,
+                "lastMessageTime" : "2019-02-05T12:01:00.000Z",
+                "messages" : [5]
+            },
+            "4" : {
+                "id" : 4,
+                "memberId" : 5,
+                "lastMessageId" : 8,
+                "lastMessageTime" : "2019-02-05T12:40:00.000Z",
+                "messages" : [6, 7, 8]
+            },
+            "5" : {
+                "id" : 5,
+                "memberId" : 3,
+                "lastMessageId" : 9,
+                "lastMessageTime" : "2019-02-05T12:42:00.000Z",
+                "messages" : [9, 10]
+            }
+        },
+        "allIds" : [1, 2, 3, 4, 5]
+    },
+    "chatMessage" : {
+        "byIds" : {
+            "1" : {
+                "id" : 1,
+                "sent_by" : "론",
+                "created_at" : "2019-02-05T11:21:00.000Z",
+                "message" : "해리, 이따 호그스미드에서 버터맥주 한잔 콜?",
+                "status" : "receive"
+            },
+            "2" : {
+                "id" : 2,
+                "sent_by" : "해리",
+                "created_at" : "2019-02-05T11:22:00.000Z",
+                "message" : "네잔 콜!",
+                "status" : "receive"
+            },
+            "3" : {
+                "id" : 3,
+                "sent_by" : "볼드모트",
+                "created_at" : "2019-02-05T11:40:00.000Z",
+                "message" : "I will kill you :ghost",
+                "status" : "receive"
+            },
+            "4" : {
+                "id" : 4,
+                "sent_by" : "해리",
+                "created_at" : "2019-02-05T11:41:00.000Z",
+                "message" : "OOh.. scary..",
+                "status" : "send"
+            },
+            "5" : {
+                "id" : 5,
+                "sent_by" : "두들리",
+                "created_at" : "2019-02-05T12:01:00.000Z",
+                "message" : "사촌! 잘지내시나? 방학이 얼마 남지 않았어! 우편함 뿌신것 때문에 울 아빠가 단단히 벼르고 있다구! ;)",
+                "status" : "receive"
+            },
+            "6" : {
+                "id" : 6,
+                "sent_by" : "해그리드",
+                "created_at" : "2019-02-05T12:31:00.000Z",
+                "message" : "해리! 우리 집에 새로운 공룡알이 도착했어!! 오늘 깨어나는데 이따 밤에 몰래 보러오지 않을래? 엄청 귀여울거야",
+                "status" : "receive"
+            },
+            "7" : {
+                "id" : 7,
+                "sent_by" : "해리",
+                "created_at" : "2019-02-05T12:33:00.000Z",
+                "message" : "오 좋아요 해그리드! 이따 론이랑 호그스미드 들렸다가 갈게요!",
+                "status" : "send"
+            },
+            "8" : {
+                "id" : 8,
+                "sent_by" : "해리",
+                "created_at" : "2019-02-05T12:40:00.000Z",
+                "message" : "아주 좋아, 내가 해그리드표 달달한 핫초코를 준비해두지! :thumbs_up",
+                "status" : "receive"
+            },
+            "9" : {
+                "id" : 9,
+                "sent_by" : "헤르미온느",
+                "created_at" : "2019-02-05T12:42:00.000Z",
+                "message" : "해리, 이따 론이랑 셋이 밤에 스터디하지 않을래? 중간고사가 얼마 안남았어!",
+                "status" : "receive"
+            },
+            "10" : {
+                "id" : 10,
+                "sent_by" : "해리",
+                "created_at" : "2019-02-05T15:42:00.000Z",
+                "message" : "오늘 감기가 걸려서 쉬어야 할것 같아 미안.. 콜록..",
+                "status" : "send"
+            }
+        },
+        "allMessage" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    "users" : {
+        "byIds" : {
+            "1" : {
+                "id" : 1,
+                "display_name" : "해리",
+                "name" : "해리",
+                "profile_image": "https://i.pinimg.com/originals/1b/5b/65/1b5b65e50cda5a8f509c9bc318c15025.jpg"
+            },
+            "2" : {
+                "id" : 2,
+                "display_name" : "론",
+                "name" : "론",
+                "profile_image": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj4xby0waPgAhWBXrwKHVtTDq0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.bustle.com%2Farticles%2F132262-9-reasons-ron-weasley-was-the-best-harry-potter-character&psig=AOvVaw0xvzYCK-XHwVK4LqGxzgDH&ust=1549418912905107"
+            },
+            "3" : {
+                "id" : 3,
+                "display_name" : "헤르미온느",
+                "name" : "헤르미온느",
+                "profile_image": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-k7npwaPgAhVF5rwKHcdLBvEQjRx6BAgBEAU&url=https%3A%2F%2Faminoapps.com%2Fc%2Fharry-potter%2Fpage%2Fblog%2Fyoung-hermione-granger%2F7KTP_u4Jm23GxMXMg4lLb43nBE820N&psig=AOvVaw2w4RYGaEMNIqSCB39jriS2&ust=1549418991640419"
+            },
+            "4" : {
+                "id" : 4,
+                "display_name" : "볼드모트",
+                "name" : "볼드모트",
+                "profile_image": "https://66.media.tumblr.com/7feac306c5acdd945782196bcfb63167/tumblr_pkil37vRCS1xgf2rro1_400.jpg"
+            },
+            "5" : {
+                "id" : 5,
+                "display_name" : "해그리드",
+                "name" : "해그리드",
+                "profile_image": "https://vignette.wikia.nocookie.net/harrypotterwiki2/images/0/0d/Hagrid.jpeg/revision/latest?cb=20121014215405"
+            },
+            "6" : {
+                "id" : 6,
+                "display_name" : "두들리",
+                "name" : "두들리",
+                "profile_image": "https://nerdist.com/wp-content/uploads/2016/09/image1.png"
+            }
+        },
+        "allIds" : [1, 2, 3, 4, 5, 6]
+    }
+}
