@@ -1,0 +1,38 @@
+.chatLists {
+    display: grid;
+    overflow-y: scroll;
+    height: 780px;
+    width: 600px;
+    grid-template-rows: 190px;
+
+    .chatList {
+        height: 190px;
+    }
+
+    img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        float: left;
+    }
+
+    .chatName, .lastMessage, .lastMessage_createdAt {
+        display: inline-block;
+        width: 330px;
+        padding-left: 30px;
+    }
+    .lastMessage_createdAt {
+        font-size: 20px;
+        color: rgb(165, 164, 164);
+        padding-top: 18px;
+        text-align: right;
+    }
+    .chatName {
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        a {
+            color: rgb(57, 41, 82);
+        }
+    }
+}

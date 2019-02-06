@@ -1,0 +1,134 @@
+.inputContainer {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+
+    .messageInput {
+        border: none;
+        font-size: 25px;
+        width: 400px;
+        padding: 20px;
+    }
+    .sendButton {
+        background-image: linear-gradient(rgb(140, 125, 255) , #7B9CFE);
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px 20px;
+        border-radius: 5px;
+    }
+}
+.chatContainer {
+    height: 720px;
+    background-color: #EBEEF1;
+    overflow-y: scroll;
+    padding: 40px;
+
+    .chat {
+        width: 400px;
+    }
+
+    .chatDate {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px;
+        font-weight: 600;
+        color: gray;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .messageBox {
+        background-color: white;
+        border-radius: 7px;
+        padding: 20px;
+        width: 300px;
+
+        .message {
+            font-size: 20px;
+            color: rgb(153, 153, 153);
+            font-weight: 500;
+        }
+    }
+
+
+    .receive {
+        position: relative;
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+
+        .chat {
+            max-width: 400px;
+        }
+
+        img {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+        }
+
+        .messageBox {
+            top: 40px;
+            left: 40px;
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+
+        .createdAt {
+            color: gray;
+            font-size: 18px;
+            display: inline-block;
+            font-weight: 500;
+            width: 60px;
+            position: absolute;
+            bottom: 35px;
+            left: 390px;
+        }
+    }
+
+    .send {
+        position: relative;
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        left: 20%;
+
+        .chat {
+            max-width: 400px;
+        }
+
+        img {
+            top: 0;
+            left: 330px;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .messageBox {
+            text-align: right;
+            padding-right: 30px;
+            padding-top: 30px;
+        }
+
+        .createdAt {
+            color: gray;
+            font-size: 18px;
+            display: inline-block;
+            font-weight: 500;
+            width: 60px;
+            position: absolute;
+            bottom: 35px;
+            right: 390px;
+        }
+    }
+}

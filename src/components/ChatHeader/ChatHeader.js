@@ -15,7 +15,7 @@ class ChatHeader extends Component {
                 <Link to="/" className="backLink"> 뒤로 </Link>
                 <div className="headerText">CHAT</div>
             </div>
-        )
+        );
     }
 }
 

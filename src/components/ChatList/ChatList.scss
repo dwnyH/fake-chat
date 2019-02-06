@@ -1,3 +1,10 @@
-.chatListContainer {
+.newMessageBox {
     height: 140px;
+    background-image: linear-gradient(to right, rgb(140, 125, 255) , #7B9CFE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
 }
