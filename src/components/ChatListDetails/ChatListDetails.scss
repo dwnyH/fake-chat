@@ -5,6 +5,10 @@
     width: 600px;
     grid-template-rows: 190px;
 
+    a:link, a:visited {
+        text-decoration: none;
+    }
+
     .chatList {
         height: 190px;
     }

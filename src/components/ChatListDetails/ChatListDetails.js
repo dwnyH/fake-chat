@@ -3,6 +3,7 @@ import './ChatListDetails.scss';
 import { Link } from 'react-router-dom';
 import * as moment from 'moment';
 import PropTypes from 'prop-types';
+import MessageConvert from '../MessageConvert';
 
 const propTypes = {
     chats: PropTypes.array
@@ -23,7 +24,9 @@ function ChatListDetails(props) {
                 <div className="chatName">
                     {chat.memberId.display_name}
                 </div>
-                <div className="lastMessage">{chat.lastMessageId.message}</div>
+                <div className="lastMessage">
+                    <MessageConvert message={chat.lastMessageId.message} />
+                </div>
             </Link>
         </div>
     ));
