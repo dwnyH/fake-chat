@@ -1,4 +1,4 @@
-import { CHAT_TYPE_SEND, SHOWLIST, SHOWCHATS } from '../actions/ActionTypes';
+import { CHAT_TYPE_SEND, SHOWLIST } from '../actions/ActionTypes';
 import { cloneDeep } from 'lodash';
 
 const initialState = {
@@ -13,7 +13,6 @@ export default function setChatLists(state = initialState, action) {
 
     switch(action.type) {
         case CHAT_TYPE_SEND:
-        debugger;
             const newId = Math.max(...messages.messagesOrder) + 1;
             messages.messagesOrder.push(newId);
             messages.messagesInfo[newId] = {
@@ -22,12 +21,12 @@ export default function setChatLists(state = initialState, action) {
                 message: action.data.data,
                 sent_by: 1,
                 status: 'send'
-            }
+            };
+
             chats.chatInfo[action.data.chatRoomInfo].messages.push(newId);
             chats.chatInfo[action.data.chatRoomInfo].lastMessageId = newId;
             chats.chatInfo[action.data.chatRoomInfo].lastMessageTime = action.data.now;
-            console.log('데이터', action.data);
-            console.log('바꿀 자료', copiedState);
+
             return copiedState;
 
         case SHOWLIST:

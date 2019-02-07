@@ -9,6 +9,7 @@ class ChatMessage extends Component {
         super(props);
         this.scrollRef = React.createRef();
     }
+
     componentDidUpdate() {
         this.scrollRef.current.scrollTop = this.scrollRef.current.scrollHeight;
     }
@@ -24,14 +25,15 @@ class ChatMessage extends Component {
                 if (chat.id === location.state.chatRoomInfo) {
                     matchedMessages = chat.messages;
                 }
-            })
+            });
+
             messageInfo = matchedMessages.map((messageId) => {
                 let mappedMessage;
                 messages.forEach((message) => {
                     if (messageId === message.id) {
                         mappedMessage = message;
                     }
-                })
+                });
                 return mappedMessage;
             });
 

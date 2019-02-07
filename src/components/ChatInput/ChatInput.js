@@ -10,8 +10,6 @@ class ChatInput extends Component {
     }
 
     sendButtonClick() {
-        debugger;
-        console.log('챗룸인포', this.props);
         const {onInput, chatRoomInfo} = this.props;
         const now = new Date().toISOString();
         const inputInfo = {
