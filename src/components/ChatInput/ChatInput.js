@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ChatInput.scss';
+import * as moment from 'moment';
 import PropTypes from 'prop-types';
 
 class ChatInput extends Component {
@@ -11,7 +12,7 @@ class ChatInput extends Component {
 
     sendButtonClick() {
         const {onInput, chatRoomInfo} = this.props;
-        const now = new Date().toISOString();
+        const now = moment().format();
         const inputInfo = {
             now,
             chatRoomInfo,

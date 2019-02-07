@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChatHeader from '../ChatHeader/ChatHeader';
 import ChatInput from '../ChatInput/ChatInput';
 import './ChatMessage.scss'
+import * as moment from 'moment';
 import PropTypes from 'prop-types';
 
 class ChatMessage extends Component {
@@ -40,7 +41,7 @@ class ChatMessage extends Component {
             messageContent = messageInfo.map((message, idx) => (
                 <React.Fragment key={message.id}>
                     {idx===0 || message.created_at.substring(0, 10) !== messageInfo[idx - 1].created_at.substring(0,10)
-                        ? <div className="chatDate"> {new Date(message.created_at).toUTCString().substring(0, 16)}</div>
+                        ? <div className="chatDate"> {moment(message.created_at).format('MMMM DD YYYY')}</div>
                         : null
                     }
                     <div className={`${message.status} chat`}>
