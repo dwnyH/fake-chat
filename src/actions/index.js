@@ -1,6 +1,6 @@
-import { CHAT_TYPE_SEND, SHOWLIST, SHOWCHATS } from '../actions/ActionTypes';
+import { CHAT_TYPE_SEND, SHOWLIST } from '../actions/ActionTypes';
 
-export function chatTypeSend(data) {
+export function chatSend(data) {
     return {
         type: CHAT_TYPE_SEND,
         data
@@ -10,13 +10,6 @@ export function chatTypeSend(data) {
 export function showList(data) {
     return {
         type: SHOWLIST,
-        data
-    }
-}
-
-export function showChats(data) {
-    return {
-        type: SHOWCHATS,
         data
     }
 }

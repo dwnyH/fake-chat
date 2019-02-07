@@ -3,22 +3,41 @@ import { cloneDeep } from 'lodash';
 
 const initialState = {
     chats: {chatOrder: [], chatInfo: {}},
-    messages: {},
-    users: {}
+    messages: {messagesOrder: [], messagesInfo: {}},
+    users: {usersOrder: [], usersInfo: {}}
 }
 
 export default function setChatLists(state = initialState, action) {
-    const copiedState = cloneDeep(initialState);
+    const copiedState = cloneDeep(state);
+    const {chats, messages, users} = copiedState;
 
     switch(action.type) {
         case CHAT_TYPE_SEND:
+        debugger;
+            const newId = Math.max(...messages.messagesOrder) + 1;
+            messages.messagesOrder.push(newId);
+            messages.messagesInfo[newId] = {
+                id: newId,
+                created_at: action.data.now,
+                message: action.data.data,
+                sent_by: 1,
+                status: 'send'
+            }
+            chats.chatInfo[action.data.chatRoomInfo].messages.push(newId);
+            chats.chatInfo[action.data.chatRoomInfo].lastMessageId = newId;
+            chats.chatInfo[action.data.chatRoomInfo].lastMessageTime = action.data.now;
+            console.log('데이터', action.data);
+            console.log('바꿀 자료', copiedState);
             return copiedState;
 
         case SHOWLIST:
-            copiedState.chats.chatOrder = action.data.chats.allIds;
-            copiedState.chats.chatInfo = action.data.chats.byIds;
-            copiedState.messages = action.data.chatMessage.byIds;
-            copiedState.users = action.data.users.byIds;
+            chats.chatOrder = action.data.chats.allIds;
+            chats.chatInfo = action.data.chats.byIds;
+            messages.messagesInfo = action.data.chatMessage.byIds;
+            messages.messagesOrder = action.data.chatMessage.allIds;
+            users.usersInfo = action.data.users.byIds;
+            users.usersOrder = action.data.users.allIds;
+
             return copiedState;
 
         default:

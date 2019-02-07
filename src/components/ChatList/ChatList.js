@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 
 class ChatList extends Component {
     render() {
-        const {chats} = this.props
-
+        const {chats, location} = this.props
+        console.log(this.props);
         return (
             <React.Fragment>
-                <ChatHeader />
+                <ChatHeader location={location} />
                 <div className="chatListContainer">
                     <div className="newMessageBox">
                         <div className="newMessage">

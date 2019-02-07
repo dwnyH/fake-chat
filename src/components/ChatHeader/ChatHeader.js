@@ -10,10 +10,20 @@ class ChatHeader extends Component {
     }
 
     render() {
+        const {location} = this.props;
+
         return (
             <div className="Header">
-                <Link to="/" className="backLink"> 뒤로 </Link>
-                <div className="headerText">CHAT</div>
+                {location.pathname !== '/'
+                    ? <Link to="/" className="backLink"> 뒤로 </Link>
+                    : null
+                }
+                <div className="headerText">
+                    {location.pathname !== '/'
+                        ? location.state.member
+                        : 'CHAT'
+                    }
+                </div>
             </div>
         );
     }
