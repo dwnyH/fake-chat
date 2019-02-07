@@ -5,6 +5,13 @@ import './ChatMessage.scss'
 import * as moment from 'moment';
 import PropTypes from 'prop-types';
 
+const propTypes = {
+    location: PropTypes.object,
+    messages: PropTypes.array,
+    onInput: PropTypes.func,
+    chats: PropTypes.array
+};
+
 class ChatMessage extends Component {
     constructor(props) {
         super(props);
@@ -67,4 +74,5 @@ class ChatMessage extends Component {
     }
 }
 
+ChatMessage.propTypes = propTypes;
 export default ChatMessage;

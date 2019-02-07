@@ -1,32 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './ChatHeader.scss'
 
-class ChatHeader extends Component {
-    constructor(props) {
-        super(props);
-        this.myRef = React.createRef();
-    }
+function ChatHeader(props) {
+    const {location} = props;
 
-    render() {
-        const {location} = this.props;
-
-        return (
-            <div className="Header">
+    return (
+        <div className="Header">
+            {location.pathname !== '/'
+                ? <Link to="/" className="backLink"> 뒤로 </Link>
+                : null
+            }
+            <div className="headerText">
                 {location.pathname !== '/'
-                    ? <Link to="/" className="backLink"> 뒤로 </Link>
-                    : null
+                    ? location.state.member
+                    : 'CHAT'
                 }
-                <div className="headerText">
-                    {location.pathname !== '/'
-                        ? location.state.member
-                        : 'CHAT'
-                    }
-                </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default ChatHeader;

@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import './App.scss';
 import ChatList from '../../components/ChatList/ChatList';
 import ChatMessage from '../../components/ChatMessage/ChatMessage';
-import {Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { cloneDeep } from 'lodash';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { get } from 'lodash';
 import * as actions from '../../actions';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  chats: PropTypes.array,
+  messages: PropTypes.array,
+  sendMessage: PropTypes.func
+};
 
 class App extends Component {
   componentDidMount() {
@@ -34,7 +40,6 @@ const mapStateToProps = (state) => {
   const {chats, messages, users} = copiedState.chats;
   const chatsInArray = chats.chatOrder.map(id => copiedState.chats.chats.chatInfo[id]);
   let messagesInArray;
-
 
   chatsInArray.sort((a, b) =>
     (b.lastMessageTime < a.lastMessageTime) ? -1 : ((b.lastMessageTime > a.lastMessageTime) ? 1 : 0))
@@ -68,4 +73,5 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
+App.propTypes = propTypes;
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ChatList.scss';
 import ChatHeader from '../ChatHeader/ChatHeader';
 import ChatListDetails from '../ChatListDetails/ChatListDetails';
 import PropTypes from 'prop-types';
 
+const propTypes = {
+    chats: PropTypes.array,
+    location: PropTypes.object
+};
+
 function ChatList(props) {
     const {chats, location} = props;
-
+    console.log(chats);
     return (
         <React.Fragment>
             <ChatHeader location={location} />
@@ -22,4 +27,5 @@ function ChatList(props) {
     );
 }
 
+ChatList.propTypes = propTypes;
 export default ChatList;

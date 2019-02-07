@@ -3,10 +3,15 @@ import './ChatInput.scss';
 import * as moment from 'moment';
 import PropTypes from 'prop-types';
 
+const propTypes = {
+    onInput: PropTypes.func,
+    chatRoomInfo: PropTypes.number
+};
+
 class ChatInput extends Component {
     constructor(props) {
         super(props);
-        this.textInput = React.createRef();
+        this.inputRef = React.createRef();
         this.sendButtonClick = this.sendButtonClick.bind(this);
     }
 
@@ -16,7 +21,7 @@ class ChatInput extends Component {
         const inputInfo = {
             now,
             chatRoomInfo,
-            data: this.textInput.current.value
+            data: this.inputRef.current.value
         }
 
         debugger;
@@ -26,11 +31,12 @@ class ChatInput extends Component {
     render() {
         return (
             <div className="inputContainer">
-                <input type="text" className="messageInput" placeholder="Type something to send..." ref={this.textInput} />
+                <input type="text" className="messageInput" placeholder="Type something to send..." ref={this.inputRef} />
                 <button className="sendButton" onClick={this.sendButtonClick}>보내기</button>
             </div>
         );
     }
 }
 
+ChatInput.propTypes = propTypes;
 export default ChatInput;
