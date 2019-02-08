@@ -5,6 +5,7 @@ import './ChatMessage.scss';
 import MessageConvert from '../MessageConvert';
 import * as moment from 'moment';
 import PropTypes from 'prop-types';
+import altImage from '../../assets/noprofile.png'
 
 const propTypes = {
     location: PropTypes.object,
@@ -53,7 +54,7 @@ class ChatMessage extends Component {
                         : null
                     }
                     <div className={`${message.status} chat`}>
-                        <img src={message.sent_by} alt="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiu5eSvx6TgAhXMT7wKHa__ByEQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Ftr%2Fbo%25C5%259F-profil-resmi-gizemli-adam-avatar-973460%2F&psig=AOvVaw2P8OjfBVhmbT0mEdJxBJeY&ust=1549454630606600"/>
+                        <img src={message.sent_by} alt={altImage}/>
                         <div className="messageBox">
                             <div className="message">
                                 <MessageConvert message={message.message} />

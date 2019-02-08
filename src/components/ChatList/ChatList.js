@@ -11,7 +11,7 @@ const propTypes = {
 
 function ChatList(props) {
     const {chats, location} = props;
-    console.log(chats);
+
     return (
         <React.Fragment>
             <ChatHeader location={location} />

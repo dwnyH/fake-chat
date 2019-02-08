@@ -59,14 +59,14 @@
                 "id" : 3,
                 "sent_by" : 4,
                 "created_at" : "2019-02-05T11:40:00.000Z",
-                "message" : "I will kill you :ghost",
+                "message" : "I will kill you!",
                 "status" : "receive"
             },
             "4" : {
                 "id" : 4,
                 "sent_by" : 1,
                 "created_at" : "2019-02-05T11:41:00.000Z",
-                "message" : "OOh.. scary..",
+                "message" : "OOh.. scary.. :ghost:",
                 "status" : "send"
             },
             "5" : {
@@ -94,7 +94,7 @@
                 "id" : 8,
                 "sent_by" : 5,
                 "created_at" : "2019-02-05T12:40:00.000Z",
-                "message" : "아주 좋아, 내가 해그리드표 달달한 핫초코를 준비해두지! :thumbs_up",
+                "message" : "아주 좋아, 내가 해그리드표 달달한 핫초코를 준비해두지! :)",
                 "status" : "receive"
             },
             "9" : {
@@ -108,7 +108,7 @@
                 "id" : 10,
                 "sent_by" : 1,
                 "created_at" : "2019-02-05T15:42:00.000Z",
-                "message" : ":thumbs_up",
+                "message" : ":thumbs_up:",
                 "status" : "send"
             }
         },

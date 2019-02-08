@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './App.scss';
+import * as actions from '../../actions';
 import ChatList from '../../components/ChatList/ChatList';
 import ChatMessage from '../../components/ChatMessage/ChatMessage';
-import { Route } from 'react-router-dom';
-import { connect } from 'react-redux';
 import { cloneDeep } from 'lodash';
-import { BrowserRouter as Router } from 'react-router-dom';
-import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -62,13 +62,13 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  requestChatInfos: async() => {
+  async requestChatInfos() {
     const chatDataRequest = await fetch('http://localhost:3000/chatData.json');
     const chatDataResponse = await chatDataRequest.json();
 
     dispatch(actions.showList(chatDataResponse));
   },
-  sendMessage : (input) => {
+  sendMessage(input) {
     dispatch(actions.chatSend(input));
   }
 });
