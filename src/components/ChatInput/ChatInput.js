@@ -6,49 +6,51 @@ import * as moment from 'moment';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    onInput: PropTypes.func,
-    chatRoomInfo: PropTypes.number
+  onInput: PropTypes.func.isRequired,
+  chatRoomInfo: PropTypes.number.isRequired,
 };
 
 class ChatInput extends Component {
-    constructor(props) {
-        super(props);
-        this.inputRef = React.createRef();
-        this.enterKeyPress = this.enterKeyPress.bind(this);
-        this.debouncedKeyPress = debounce(this.debouncedKeyPress.bind(this), 300);
-        this.sendButtonClick = this.sendButtonClick.bind(this);
-    }
+  constructor(props) {
+    super(props);
 
-    debouncedKeyPress(key) {
-        if (key === 'Enter') {
-            this.sendButtonClick();
-        }
-    }
+    this.debouncedKeyPress = debounce(this.debouncedKeyPress.bind(this), 300);
+    this.enterKeyPress = this.enterKeyPress.bind(this);
+    this.inputRef = React.createRef();
+    this.sendButtonClick = this.sendButtonClick.bind(this);
+  }
 
-    enterKeyPress(ev) {
-        this.debouncedKeyPress(ev.key);
+  debouncedKeyPress(key) {
+    if (key === 'Enter') {
+      this.sendButtonClick();
     }
+  }
 
-    sendButtonClick() {
-        const {onInput, chatRoomInfo} = this.props;
-        const now = moment().format();
-        const inputInfo = {
-            now,
-            chatRoomInfo,
-            data: this.inputRef.current.value
-        }
+  enterKeyPress(ev) {
+    this.debouncedKeyPress(ev.key);
+  }
 
-        onInput(inputInfo);
-    }
+  sendButtonClick() {
+    const { onInput, chatRoomInfo } = this.props;
+    const now = moment().format();
+    const inputInfo = {
+      now,
+      chatRoomInfo,
+      data: this.inputRef.current.value,
+    };
 
-    render() {
-        return (
-            <div className="inputContainer">
-                <input type="text" className="messageInput" placeholder="Type something to send..." onKeyPress={this.enterKeyPress} ref={this.inputRef} />
-                <button className="sendButton" onClick={this.sendButtonClick}>보내기</button>
-            </div>
-        );
-    }
+    onInput(inputInfo);
+    this.inputRef.current.value = '';
+  }
+
+  render() {
+    return (
+      <div className="inputContainer">
+        <input type="text" className="messageInput" placeholder="Type something to send..." onKeyPress={this.enterKeyPress} ref={this.inputRef} />
+        <button className="sendButton" onClick={this.sendButtonClick} type="button">보내기</button>
+      </div>
+    );
+  }
 }
 
 ChatInput.propTypes = propTypes;
