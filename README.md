@@ -2,6 +2,8 @@
 
 React & Redux를 이용하여 만든 가짜 채팅 어플리케이션입니다.
 
+![preview](https://github.com/hiiiii11/fake-chat/blob/master/public/%5BSHANA%5DChat%20Simulator%20-%20Chrome%202019-02-09%20%EC%98%A4%EC%A0%84%209_20_06.gif)
+
 ## Setup
 
 Install dependencies
